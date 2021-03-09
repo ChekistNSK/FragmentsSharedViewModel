@@ -28,7 +28,7 @@ class FragmentA : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-        viewModel.getText().observe(viewLifecycleOwner, { chars -> edit_text.setText(chars) })
+        viewModel.text.observe(viewLifecycleOwner, { chars -> edit_text.setText(chars) })
     }
 
 }
